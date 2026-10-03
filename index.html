@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="mr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="theme-color" content="#172554">
+<title>इस्रो नासा सहल परीक्षा सराव चाचणी — सुधारित आवृत्ती</title>
+<style>
+:root{--navy:#172554;--blue:#2563eb;--sky:#0ea5e9;--green:#16a34a;--red:#dc2626;--amber:#d97706;--purple:#7c3aed;--bg:#f4f7fb;--card:#fff;--text:#172033;--muted:#64748b;--border:#dbe3ef}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Noto Sans Devanagari",sans-serif;background:linear-gradient(145deg,#eef6ff,#f8fafc 55%,#eef2ff);color:var(--text)}
+header{position:sticky;top:0;z-index:20;background:rgba(23,37,84,.97);color:#fff;box-shadow:0 4px 18px #0002}
+.head{max-width:900px;margin:auto;padding:11px 14px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.brand{font-weight:800;font-size:16px}.sub{font-size:11px;opacity:.8;margin-top:2px}.pill{background:#fff1;border:1px solid #fff3;padding:7px 10px;border-radius:999px;font-weight:700;white-space:nowrap}
+main{max-width:900px;margin:auto;padding:18px 14px 35px}.screen{display:none}.screen.active{display:block}
+.hero{background:linear-gradient(135deg,#172554,#1d4ed8);color:#fff;border-radius:24px;padding:25px 18px;text-align:center;box-shadow:0 14px 35px #17255430}
+.hero .rocket{font-size:40px}.hero h1{font-size:24px;margin:5px 0}.hero h2{font-size:18px;margin:6px 0}.hero p{margin:6px 0;color:#dbeafe}
+.section{background:var(--card);border:1px solid var(--border);border-radius:18px;margin-top:14px;padding:18px;box-shadow:0 7px 22px #1725540b}
+.section h3{margin:0 0 12px;color:var(--navy)}label{display:block;font-weight:800;margin:10px 0 6px}
+input,select{width:100%;border:2px solid #dbe3ef;border-radius:12px;padding:12px;font-size:16px;background:#fff;outline:none}
+input:focus,select:focus{border-color:#60a5fa;box-shadow:0 0 0 3px #dbeafe}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.topic{padding:12px;border-radius:13px;background:#f8fafc;border:1px solid var(--border)}.topic b{display:block;margin-bottom:4px}
+.btn{border:0;border-radius:14px;padding:12px 17px;font-weight:800;font-size:15px;cursor:pointer;transition:.15s;box-shadow:0 5px 14px #0001}.btn:active{transform:scale(.98)}
+.primary{background:#fff;color:#1d4ed8}.blue{background:var(--blue);color:#fff}.green{background:var(--green);color:#fff}.purple{background:var(--purple);color:#fff}.light{background:#eef2ff;color:#1e3a8a}.red{background:#fee2e2;color:#991b1b}
+.testbar{display:flex;justify-content:space-between;gap:8px;align-items:center;margin-bottom:12px}.progress{height:8px;background:#dbeafe;border-radius:9px;overflow:hidden;flex:1}.progress>i{display:block;height:100%;background:linear-gradient(90deg,#0ea5e9,#2563eb);width:0}
+.qcard{background:#fff;border:1px solid var(--border);border-radius:20px;padding:20px;box-shadow:0 12px 30px #17255412}.qnum{color:#2563eb;font-weight:800;font-size:14px}.question{font-size:21px;font-weight:800;line-height:1.5;margin:10px 0 18px}
+.options{display:grid;gap:10px}.opt{width:100%;text-align:left;border:2px solid #dbe3ef;background:#fff;border-radius:13px;padding:13px 14px;font-size:16px;cursor:pointer}.opt.correct{border-color:#16a34a;background:#ecfdf5;color:#166534}.opt.wrong{border-color:#dc2626;background:#fef2f2;color:#991b1b}.opt.disabled{cursor:default}
+.feedback{margin-top:15px;padding:14px;border-radius:13px;display:none;line-height:1.55}.feedback.show{display:block}.feedback.ok{background:#ecfdf5;border:1px solid #86efac;color:#166534}.feedback.no{background:#fef2f2;border:1px solid #fecaca;color:#991b1b}
+.explain{margin-top:10px;background:#fff;border:1px solid #dbeafe;border-radius:12px;padding:12px;color:#334155}
+.actions{display:flex;gap:9px;justify-content:space-between;margin-top:16px}.actions .btn{flex:1}
+.score{font-size:42px;font-weight:900;color:#1d4ed8;text-align:center}.statgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.stat{background:#f8fafc;border:1px solid var(--border);border-radius:13px;padding:12px;text-align:center}.stat b{font-size:21px;display:block}
+.wrongitem{border:1px solid #fecaca;background:#fff7f7;border-radius:14px;padding:13px;margin:9px 0}.wrongitem b{color:#991b1b}.answer{color:#166534;margin-top:6px}
+.cert{border:4px double #2563eb;border-radius:18px;padding:24px;text-align:center;background:linear-gradient(135deg,#fff,#eff6ff)}.cert h2{margin:5px 0;color:#172554}.cert .name{font-size:25px;font-weight:900;margin:14px 0;color:#1d4ed8}.cert small{color:#64748b}
+.badge{display:inline-block;background:#ede9fe;color:#5b21b6;border-radius:999px;padding:5px 10px;font-size:12px;font-weight:800;margin:3px}
+.notice{background:#fffbeb;border:1px solid #fde68a;color:#92400e;padding:12px;border-radius:12px;line-height:1.5;margin-top:12px}
+footer{text-align:center;color:#64748b;font-size:12px;padding:20px}.hidden{display:none!important}
+@media(max-width:620px){.grid{grid-template-columns:1fr}.question{font-size:19px}.hero h1{font-size:22px}.head{padding:10px 12px}.brand{font-size:14px}.statgrid{grid-template-columns:1fr 1fr}.stat:last-child{grid-column:1/-1}}
+</style>
+</head>
+<body>
+<header><div class="head"><div><div class="brand">🚀 इस्रो नासा सहल परीक्षा सराव चाचणी</div><div class="sub">गणित • इयत्ता ५ वी ते ८ वी</div></div><div style="display:flex;gap:6px;align-items:center"><div class="pill">काठिण्य: मिश्र</div><div class="pill" id="topScore">0 / 50</div></div></div></header>
+
+<main>
+<section id="start" class="screen active">
+<div class="hero">
+<div class="rocket">🚀</div>
+<h1>पंचायत समिती शिक्षण विभाग माजलगाव</h1>
+<h2>इस्रो नासा सहल परीक्षा — सराव चाचणी</h2>
+<p>गणित • इयत्ता ५ वी / ६ वी / ७ वी / ८ वी</p>
+</div>
+
+<div class="section">
+<h3>👤 विद्यार्थी माहिती</h3>
+<label for="studentName">विद्यार्थी नाव</label>
+<input id="studentName" type="text" placeholder="आपले पूर्ण नाव लिहा" autocomplete="name">
+<label for="studentClass">इयत्ता निवडा</label>
+<select id="studentClass">
+<option value="">— इयत्ता निवडा —</option>
+<option>इयत्ता ५ वी</option><option>इयत्ता ६ वी</option><option>इयत्ता ७ वी</option><option>इयत्ता ८ वी</option>
+</select>
+<div class="notice">ℹ️ प्रत्येक प्रश्नाचे उत्तर दिल्यावर लगेच चूक/बरोबर आणि सविस्तर स्पष्टीकरण दिसेल. शेवटी गुणपत्रक, चुकीच्या प्रश्नांची उजळणी व नावासह प्रमाणपत्र मिळेल.</div>
+<button class="btn blue" style="width:100%;margin-top:14px" onclick="showStudy()">📚 अभ्यास सुरू करा</button>
+</div>
+
+<div class="section"><h3>📚 अभ्यास घटक</h3><div class="grid">
+<div class="topic"><b>🔢 संख्या व क्रिया</b>बेरीज, वजाबाकी, गुणाकार, भागाकार, क्रियांचा क्रम, अंदाज, तुलना, स्थानिक/दर्शनी किंमत, क्रम, शेष व शब्दसमस्या.</div>
+<div class="topic"><b>📏 मापन</b>लांबी, वस्तुमान, क्षमता, वेळ, पैसा, परिमिती व क्षेत्रफळ.</div>
+</div></div>
+</section>
+
+<section id="study" class="screen">
+<div class="section"><h3>📚 सविस्तर संकल्पना अभ्यास</h3>
+<div class="formula"><b>स्थानिक किंमत:</b> अंक कोणत्या स्थानावर आहे त्यानुसार त्याची किंमत ठरते. उदा. 7,305 मध्ये 3 ची स्थानिक किंमत 300.</div>
+<div class="formula"><b>दर्शनी किंमत:</b> अंकाचे स्वतःचे मूल्य. उदा. 8,642 मधील 6 ची दर्शनी किंमत 6.</div>
+<div class="formula"><b>भागाकार नियम:</b> भाज्य = भाजक × भागफल + बाकी; बाकी नेहमी भाजकापेक्षा लहान असते.</div>
+<div class="formula"><b>क्रियांचा क्रम:</b> कंस → गुणाकार/भागाकार → बेरीज/वजाबाकी.</div>
+<div class="formula"><b>मुख्य रूपांतरे:</b> 1 मी = 100 सेमी; 1 किमी = 1,000 मी; 1 किग्रॅ = 1,000 ग्रॅम; 1 क्विंटल = 100 किग्रॅ; 1 टन = 1,000 किग्रॅ; 1 लिटर = 1,000 mL; 1 तास = 60 मिनिटे; 1 मिनिट = 60 सेकंद.</div>
+<div class="formula"><b>परिमिती:</b> आयत = 2 × (लांबी + रुंदी); चौरस = 4 × बाजू.</div>
+<div class="formula"><b>क्षेत्रफळ:</b> आयत = लांबी × रुंदी; चौरस = बाजू × बाजू.</div>
+</div>
+<div class="section"><h3>✏️ उदाहरणे</h3>
+<div class="example"><strong>उदा. 1:</strong> 24 × 6 = 144. 20 × 6 = 120; 4 × 6 = 24; 120 + 24 = <b>144</b>.</div>
+<div class="example"><strong>उदा. 2:</strong> 3.5 मी = ? सेमी → 3.5 × 100 = <b>350 सेमी</b>.</div>
+<div class="example"><strong>उदा. 3:</strong> आयताची लांबी 9 सेमी, रुंदी 4 सेमी. क्षेत्रफळ = 9 × 4 = <b>36 चौ.सेमी</b>.</div>
+<div class="example"><strong>उदा. 4:</strong> ₹200 − ₹156 = <b>₹44</b>.</div>
+<button class="btn blue" style="width:100%;margin-top:8px" onclick="startTest()">📝 50 प्रश्नांची चाचणी सुरू करा</button>
+</div>
+</section>
+
+<section id="test" class="screen">
+<div class="testbar"><b id="progressText">प्रश्न 1 / 50</b><div class="progress"><i id="progress"></i></div><b id="liveScore">0</b></div>
+<div class="qcard">
+<div class="qnum" id="qnum"></div><div class="question" id="question"></div><div class="options" id="options"></div>
+<div id="feedback" class="feedback"></div>
+<div class="actions"><button class="btn light" id="nextBtn" onclick="nextQuestion()" disabled>पुढील प्रश्न →</button></div>
+</div>
+</section>
+
+<section id="result" class="screen">
+<div class="section">
+<h3 style="text-align:center">🏆 गुणपत्रक</h3>
+<div style="text-align:center"><span class="badge" id="resultName"></span><span class="badge" id="resultClass"></span></div>
+<div class="score" id="finalScore">0 / 50</div>
+<div class="statgrid">
+<div class="stat"><b id="correctCount">0</b>बरोबर</div><div class="stat"><b id="wrongCount">0</b>चूक</div><div class="stat"><b id="percent">0%</b>टक्केवारी</div>
+</div>
+<div style="text-align:center;margin-top:15px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center">
+<button class="btn blue" onclick="showWrong()">🔄 चुकीच्या प्रश्नांची उजळणी</button>
+<button class="btn purple" onclick="retryWrong()">🧠 चुकीचे प्रश्न पुन्हा सोडवा</button>
+<button class="btn green" onclick="showCertificate()">🏅 प्रमाणपत्र</button>
+</div>
+</div>
+<div id="wrongSection" class="section hidden"><h3>🔄 चुकीच्या प्रश्नांची उजळणी</h3><div id="wrongList"></div></div>
+<div id="certSection" class="section hidden">
+<div class="cert"><div style="font-size:34px">🏅</div><h2>प्रमाणपत्र</h2><p>इस्रो नासा सहल परीक्षा</p><p>सराव चाचणी • गणित</p><div class="name" id="certName">विद्यार्थी</div><p id="certClass">इयत्ता</p><p>गणित — संख्यांवरील मूलभूत क्रिया व मापन</p><p><b id="certScore"></b></p><p>सौजन्य - प्रवीण जाधव सर, जि प केंद्रीय प्राथमिक शाळा तालखेड.</p><small>हे डिजिटल सराव प्रमाणपत्र आहे.</small></div>
+</div>
+<div class="section" style="text-align:center"><button class="btn blue" onclick="restart()">🔁 पुन्हा चाचणी द्या</button></div>
+</section>
+</main>
+<footer><b>उत्तर अचूकता नोंद:</b> सर्व प्रश्नांची गणितीय उत्तरकळी व स्पष्टीकरण तपासून दुरुस्त केलेले आहे.<br>created by - Pravin Jadhav, CPS TALKHED</footer>
+
+<script>
+const questions = [{"q": "245 + 378 = ?", "options": ["623", "633", "603", "613"], "answer": 0, "explanation": "245 + 378 = 623. शेकडे, दशके आणि एकके उभ्या रचनेत बेरीज केल्यास 623 मिळते."}, {"q": "900 − 456 = ?", "options": ["444", "454", "446", "434"], "answer": 0, "explanation": "900 − 456 = 444. 900 मधून 400 वजा केल्यावर 500, 56 वजा केल्यावर 444."}, {"q": "24 × 6 = ?", "options": ["144", "134", "154", "124"], "answer": 0, "explanation": "24 × 6 = 144. 20 × 6 = 120 आणि 4 × 6 = 24; 120 + 24 = 144."}, {"q": "168 ÷ 8 = ?", "options": ["21", "19", "20", "22"], "answer": 0, "explanation": "168 ÷ 8 = 21, कारण 8 × 21 = 168."}, {"q": "18 + 6 × 2 = ?", "options": ["30", "24", "36", "48"], "answer": 0, "explanation": "गुणाकार आधी: 6 × 2 = 12; नंतर 18 + 12 = 30."}, {"q": "597 + 204 चा जवळचा अंदाज कोणता?", "options": ["800", "600", "900", "700"], "answer": 0, "explanation": "597 ≈ 600 आणि 204 ≈ 200. म्हणून अंदाजे बेरीज 800."}, {"q": "7,305 मध्ये 3 ची स्थानिक किंमत किती?", "options": ["300", "30", "3,000", "3"], "answer": 0, "explanation": "7,305 मध्ये 3 हे शतक स्थानावर आहे. त्यामुळे स्थानिक किंमत 300."}, {"q": "8,642 मधील 6 ची दर्शनी किंमत किती?", "options": ["6", "60", "6,000", "600"], "answer": 0, "explanation": "दर्शनी किंमत म्हणजे अंकाचे स्वतःचे मूल्य. म्हणून 6."}, {"q": "4,205, 4,250, 4,025, 4,520 यापैकी चढता क्रम कोणता?", "options": ["4,025, 4,205, 4,250, 4,520", "4,205, 4,025, 4,250, 4,520", "4,025, 4,250, 4,205, 4,520", "4,520, 4,250, 4,205, 4,025"], "answer": 0, "explanation": "हजार समान असल्याने शेकडे, दशके आणि एकके तुलना करा. योग्य चढता क्रम 4,025 < 4,205 < 4,250 < 4,520."}, {"q": "53 ला 7 ने भागल्यास बाकी किती?", "options": ["6", "7", "4", "5"], "answer": 2, "explanation": "7 × 7 = 49. 53 − 49 = 4. म्हणून बाकी 4."}, {"q": "एका भागाकारात भाज्य 95, भाजक 9 आणि भागफल 10 आहे. बाकी किती?", "options": ["5", "3", "6", "4"], "answer": 0, "explanation": "भाज्य = भाजक × भागफल + बाकी. 95 = 9 × 10 + बाकी; म्हणून बाकी = 5."}, {"q": "खालीलपैकी योग्य संबंध कोणता?", "options": ["भाज्य = भाजक × भागफल + बाकी", "बाकी = भाज्य + भाजक × भागफल", "भागफल = भाज्य × भाजक + बाकी", "भाज्य = भाजक + भागफल + बाकी"], "answer": 0, "explanation": "भागाकाराचा मूलभूत नियम: भाज्य = भाजक × भागफल + बाकी."}, {"q": "एका दुकानात 125 पेन्सिली होत्या. 48 विकल्या. उरल्या किती?", "options": ["77", "83", "67", "73"], "answer": 0, "explanation": "125 − 48 = 77. म्हणून 77 पेन्सिली उरल्या."}, {"q": "एका पेटीत 18 संत्री आहेत. 7 पेट्यांत किती संत्री?", "options": ["146", "126", "116", "136"], "answer": 1, "explanation": "18 × 7 = 126 संत्री."}, {"q": "240 विद्यार्थ्यांना 6 समान गटांत विभागले. प्रत्येक गटात किती?", "options": ["60", "40", "30", "50"], "answer": 1, "explanation": "240 ÷ 6 = 40. प्रत्येक गटात 40 विद्यार्थी."}, {"q": "1 मीटर = किती सेंटीमीटर?", "options": ["50", "100", "10", "1,000"], "answer": 1, "explanation": "1 मीटर = 100 सेंटीमीटर."}, {"q": "3.5 मीटर = किती सेंटीमीटर?", "options": ["3,500", "350", "305", "35"], "answer": 1, "explanation": "1 मीटर = 100 सेमी. म्हणून 3.5 × 100 = 350 सेमी."}, {"q": "2 किलोमीटर = किती मीटर?", "options": ["20,000", "2,000", "200", "20"], "answer": 1, "explanation": "1 किमी = 1,000 मीटर. म्हणून 2 किमी = 2,000 मीटर."}, {"q": "750 सेंटीमीटर = किती मीटर?", "options": ["0.75", "7.5", "75", "750"], "answer": 1, "explanation": "100 सेमी = 1 मीटर. 750 ÷ 100 = 7.5 मीटर."}, {"q": "1 किलोग्रॅम = किती ग्रॅम?", "options": ["10,000", "1,000", "500", "100"], "answer": 1, "explanation": "1 किलोग्रॅम = 1,000 ग्रॅम."}, {"q": "2.5 किलोग्रॅम = किती ग्रॅम?", "options": ["250", "2,500", "25,000", "2,050"], "answer": 1, "explanation": "2.5 × 1,000 = 2,500 ग्रॅम."}, {"q": "1 क्विंटल = किती किलोग्रॅम?", "options": ["10", "100", "1,000", "50"], "answer": 1, "explanation": "1 क्विंटल = 100 किलोग्रॅम."}, {"q": "1 टन = किती किलोग्रॅम?", "options": ["500", "1,000", "100", "10,000"], "answer": 1, "explanation": "1 टन = 1,000 किलोग्रॅम."}, {"q": "2 लिटर = किती मिलिलिटर?", "options": ["1,020", "2,000", "20,000", "200"], "answer": 1, "explanation": "1 लिटर = 1,000 मिलिलिटर. म्हणून 2 लिटर = 2,000 मिलिलिटर."}, {"q": "3,500 मिलिलिटर = किती लिटर?", "options": ["0.35", "3.5", "3.05", "35"], "answer": 1, "explanation": "1,000 mL = 1 L. 3,500 ÷ 1,000 = 3.5 L."}, {"q": "2 तास = किती मिनिटे?", "options": ["180", "120", "90", "60"], "answer": 1, "explanation": "1 तास = 60 मिनिटे. म्हणून 2 × 60 = 120 मिनिटे."}, {"q": "3 मिनिटे = किती सेकंद?", "options": ["240", "120", "180", "300"], "answer": 2, "explanation": "1 मिनिट = 60 सेकंद. 3 × 60 = 180 सेकंद."}, {"q": "2 आठवडे = किती दिवस?", "options": ["12", "21", "14", "7"], "answer": 2, "explanation": "1 आठवडा = 7 दिवस. 2 × 7 = 14 दिवस."}, {"q": "1 वर्ष साधारण किती दिवसांचे असते?", "options": ["300", "360", "365", "400"], "answer": 2, "explanation": "सामान्य वर्षात 365 दिवस असतात; अधिवर्षात 366."}, {"q": "3:20 वाजता सुरू झालेला अभ्यास 45 मिनिटांनी संपला. वेळ?", "options": ["4:05", "4:00", "3:55", "4:15"], "answer": 0, "explanation": "3:20 + 40 मिनिटे = 4:00; आणखी 5 मिनिटे = 4:05. योग्य उत्तर 4:05."}, {"q": "₹50 मधून ₹37 खर्च केले. उरले किती?", "options": ["₹11", "₹14", "₹13", "₹12"], "answer": 2, "explanation": "₹50 − ₹37 = ₹13."}, {"q": "5 वही प्रत्येकी ₹24. एकूण किंमत?", "options": ["₹125", "₹100", "₹120", "₹110"], "answer": 2, "explanation": "5 × ₹24 = ₹120."}, {"q": "₹200 देऊन ₹156 ची वस्तू घेतली. परतावा?", "options": ["₹64", "₹54", "₹44", "₹34"], "answer": 2, "explanation": "₹200 − ₹156 = ₹44."}, {"q": "₹12.50 + ₹7.50 = ?", "options": ["₹22", "₹21", "₹20", "₹19"], "answer": 2, "explanation": "12.50 + 7.50 = 20.00 रुपये."}, {"q": "आयताची लांबी 8 सेमी व रुंदी 5 सेमी. परिमिती?", "options": ["40 सेमी", "13 सेमी", "26 सेमी", "80 सेमी"], "answer": 2, "explanation": "आयताची परिमिती = 2 × (लांबी + रुंदी) = 2 × 13 = 26 सेमी."}, {"q": "चौरसाची बाजू 6 सेमी. परिमिती?", "options": ["18 सेमी", "36 सेमी", "24 सेमी", "12 सेमी"], "answer": 2, "explanation": "चौरसाची परिमिती = 4 × बाजू = 4 × 6 = 24 सेमी."}, {"q": "आयताची लांबी 9 सेमी व रुंदी 4 सेमी. क्षेत्रफळ?", "options": ["45 चौ.सेमी", "13 चौ.सेमी", "36 चौ.सेमी", "26 चौ.सेमी"], "answer": 2, "explanation": "आयताचे क्षेत्रफळ = लांबी × रुंदी = 9 × 4 = 36 चौ.सेमी."}, {"q": "चौरसाची बाजू 7 सेमी. क्षेत्रफळ?", "options": ["28 चौ.सेमी", "56 चौ.सेमी", "49 चौ.सेमी", "14 चौ.सेमी"], "answer": 2, "explanation": "चौरसाचे क्षेत्रफळ = बाजू × बाजू = 7 × 7 = 49 चौ.सेमी."}, {"q": "2 मी 35 सेमी + 1 मी 65 सेमी = ?", "options": ["4 मी 10 सेमी", "3 मी 50 सेमी", "3 मी", "4 मी"], "answer": 3, "explanation": "35 सेमी + 65 सेमी = 100 सेमी = 1 मी. त्यामुळे 2 मी + 1 मी + 1 मी = 4 मी."}, {"q": "5 किग्रॅ 250 ग्रॅम − 2 किग्रॅ 750 ग्रॅम = ?", "options": ["3 किग्रॅ 750 ग्रॅम", "3 किग्रॅ 500 ग्रॅम", "2 किग्रॅ 250 ग्रॅम", "2 किग्रॅ 500 ग्रॅम"], "answer": 3, "explanation": "5 किग्रॅ 250 ग्रॅम = 5,250 ग्रॅम; 2,750 ग्रॅम वजा केल्यावर 2,500 ग्रॅम = 2 किग्रॅ 500 ग्रॅम."}, {"q": "एका टाकीत 5 लिटर पाणी आहे. त्यातून 1.75 लिटर वापरले. उरले?", "options": ["2.25 L", "3.75 L", "3.00 L", "3.25 L"], "answer": 3, "explanation": "5.00 − 1.75 = 3.25 लिटर."}, {"q": "एका बसने 135 किमी प्रवास केला आणि परतीला 128 किमी. एकूण?", "options": ["283 किमी", "253 किमी", "273 किमी", "263 किमी"], "answer": 3, "explanation": "135 + 128 = 263 किमी."}, {"q": "एका विद्यार्थ्याने 4 दिवस रोज 35 मिनिटे अभ्यास केला. एकूण?", "options": ["130 मिनिटे", "120 मिनिटे", "150 मिनिटे", "140 मिनिटे"], "answer": 3, "explanation": "4 × 35 = 140 मिनिटे = 2 तास 20 मिनिटे."}, {"q": "एका शेतकऱ्याकडे 3 पोती, प्रत्येक 25 किग्रॅ. एकूण वस्तुमान?", "options": ["85 किग्रॅ", "50 किग्रॅ", "65 किग्रॅ", "75 किग्रॅ"], "answer": 3, "explanation": "3 × 25 = 75 किग्रॅ."}, {"q": "एका बाटलीत 750 mL आणि दुसऱ्यात 1.25 L. एकूण?", "options": ["2.50 L", "2.25 L", "1.75 L", "2.00 L"], "answer": 3, "explanation": "1.25 L = 1,250 mL. 1,250 + 750 = 2,000 mL = 2 L."}, {"q": "खालीलपैकी कोणते मापनासाठी सर्वात योग्य आहे? वर्गखोलीची लांबी", "options": ["मिलिग्रॅम", "मिलिलिटर", "पैसे", "मीटर"], "answer": 3, "explanation": "वर्गखोलीची लांबी मोजण्यासाठी मीटर हे योग्य लांबीचे एकक आहे."}, {"q": "अंदाजे 398 + 202 किती?", "options": ["500", "400", "700", "600"], "answer": 3, "explanation": "398 ≈ 400 आणि 202 ≈ 200; त्यामुळे अंदाजे बेरीज 600."}, {"q": "एका संख्येला 10 ने गुणिले तर तिच्या अंकांच्या स्थानमूल्यात काय होते?", "options": ["संख्या बदलत नाही", "संख्या 10 ने कमी होते", "संख्या 2 ने वाढते", "संख्या 10 पट होते"], "answer": 3, "explanation": "10 ने गुणल्यावर संख्या 10 पट होते; दशांश पद्धतीत प्रत्येक अंक एक स्थान डावीकडे सरकतो."}, {"q": "7, 0, 5 या अंकांपासून तयार होणारी सर्वात मोठी 3 अंकी संख्या कोणती?", "options": ["570", "507", "705", "750"], "answer": 3, "explanation": "सर्वात मोठी संख्या मिळवण्यासाठी मोठा अंक 7 शेकड्यांच्या स्थानी, 5 दशकात आणि 0 एककात: 750."}, {"q": "एका संख्येचे 1/2 = 25 असल्यास ती संख्या किती?", "options": ["40", "55", "45", "50"], "answer": 3, "explanation": "अर्धी संख्या 25 आहे, म्हणून पूर्ण संख्या = 25 × 2 = 50."}];
+let current=0, score=0, answered=false, wrong=[], testQuestions=[], mode='full';
+let studentName='', studentClass='';
+
+const $=id=>document.getElementById(id);
+function show(id){document.querySelectorAll('.screen').forEach(x=>x.classList.remove('active'));$(id).classList.add('active');window.scrollTo(0,0)}
+function showStudy(){studentName=$('studentName').value.trim();studentClass=$('studentClass').value;if(!studentName||!studentClass){alert('कृपया विद्यार्थी नाव आणि इयत्ता निवडा.');return}show('study')}
+function shuffle(arr){const a=[...arr];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function startTest(){if(!studentName||!studentClass){studentName=$('studentName').value.trim();studentClass=$('studentClass').value}if(!studentName||!studentClass){alert('कृपया विद्यार्थी नाव आणि इयत्ता निवडा.');show('start');return}mode='full';testQuestions=questions.map((q,i)=>({...q,id:i,options:q.options.map((text,idx)=>({text,correct:idx===q.answer}))}));current=0;score=0;wrong=[];show('test');renderQuestion()}
+function startRetry(ids){mode='retry';testQuestions=ids.map(id=>{const q=questions[id];return {...q,id,options:q.options.map((text,idx)=>({text,correct:idx===q.answer}))}});current=0;score=0;wrong=[];show('test');renderQuestion()}
+function renderQuestion(){const item=testQuestions[current];answered=false;$('qnum').textContent='प्रश्न '+(current+1);$('question').textContent=item.q;const total=testQuestions.length;$('progressText').textContent='प्रश्न '+(current+1)+' / '+total;$('progress').style.width=((current+1)/total*100)+'%';$('liveScore').textContent=score;$('topScore').textContent=score+' / '+total;$('feedback').className='feedback';$('feedback').innerHTML='';$('nextBtn').disabled=true;$('nextBtn').textContent=current===total-1?'गुणपत्रक पाहा →':'पुढील प्रश्न →';const box=$('options');box.innerHTML='';const shuffled=shuffle(item.options);shuffled.forEach((opt,i)=>{const b=document.createElement('button');b.className='opt';b.innerHTML='<b>'+String.fromCharCode(65+i)+'.</b> '+opt.text;b.onclick=()=>check(opt.correct,b,opt.text,shuffled);box.appendChild(b)})}
+function check(isCorrect,btn,chosen,shuffled){if(answered)return;answered=true;document.querySelectorAll('.opt').forEach(x=>x.classList.add('disabled'));const item=testQuestions[current];const correctOpt=[...document.querySelectorAll('.opt')].find((el)=>el.textContent.includes(item.options.find(o=>o.correct).text));if(correctOpt)correctOpt.classList.add('correct');if(isCorrect){score++;btn.classList.add('correct');$('feedback').className='feedback show ok';$('feedback').innerHTML='<b>✓ बरोबर!</b><div class="explain"><b>स्पष्टीकरण:</b> '+item.explanation+'</div>'}else{btn.classList.add('wrong');wrong.push(item.id);const correct=item.options.find(o=>o.correct).text;$('feedback').className='feedback show no';$('feedback').innerHTML='<b>✗ चूक.</b> योग्य उत्तर: <b>'+correct+'</b><div class="explain"><b>स्पष्टीकरण:</b> '+item.explanation+'</div>'}$('liveScore').textContent=score;$('topScore').textContent=score+' / '+testQuestions.length;$('nextBtn').disabled=false}
+function nextQuestion(){if(current===testQuestions.length-1){finish();return}current++;renderQuestion()}
+function finish(){const total=testQuestions.length;$('finalScore').textContent=score+' / '+total;$('correctCount').textContent=score;$('wrongCount').textContent=total-score;$('percent').textContent=Math.round(score*100/total)+'%';$('resultName').textContent=studentName;$('resultClass').textContent=studentClass;$('wrongSection').classList.add('hidden');$('certSection').classList.add('hidden');show('result')}
+function showWrong(){const list=$('wrongList');list.innerHTML='';if(!wrong.length){list.innerHTML='<div class="feedback show ok">🎉 एकही प्रश्न चुकला नाही. उत्कृष्ट!</div>'}else{const unique=[...new Set(wrong)];unique.forEach((id,n)=>{const x=questions[id];const correct=x.options[x.answer];const d=document.createElement('div');d.className='wrongitem';d.innerHTML='<b>'+(n+1)+'. '+x.q+'</b><div class="answer">योग्य उत्तर: '+correct+'</div><div class="explain"><b>स्पष्टीकरण:</b> '+x.explanation+'</div>';list.appendChild(d)})}$('wrongSection').classList.remove('hidden');window.scrollTo(0,document.body.scrollHeight)}
+function retryWrong(){const ids=[...new Set(wrong)];if(!ids.length){alert('चुकीचे प्रश्न नाहीत. पुन्हा सरावाची गरज नाही!');return}startRetry(ids)}
+function showCertificate(){$('certName').textContent=studentName||'विद्यार्थी';$('certClass').textContent=studentClass||'इयत्ता';$('certScore').textContent='गुण: '+score+' / '+testQuestions.length+'  |  टक्केवारी: '+Math.round(score*100/testQuestions.length)+'%';$('certSection').classList.remove('hidden');window.scrollTo(0,document.body.scrollHeight)}
+function restart(){show('start');$('topScore').textContent='0 / 50';$('studentName').value=studentName;$('studentClass').value=studentClass}
+</script>
+</body></html>
